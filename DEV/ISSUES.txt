@@ -1,0 +1,3 @@
+multibrute.py issues:
+- Currently this script only works on Linux. Windows has an issue with the multiprocessing.Process() function.
+- The iterations/second potential is being bottlenecked by the fact that there is a single thread generating all the strings to be hashed.
