@@ -13,6 +13,7 @@ USAGE
 Install requirements:
 'pip3 install -r requirements'
 
-Using multiburte.py:
-python3 multiburte.py --help
-python3 multiburte.py HASHFILE ALGORITHM <options>
+Using multibrute.py:
+Help:           python3 multibrute.py --help
+Basic usage:    python3 multibrute.py HASHFILE ALGORITHM <options>
+Example:        python3 ./multibrute.py ./Resources/hash.txt md5
