@@ -8,19 +8,6 @@ NOTES
 - Windows has an issue with spawning new processes with multiprocess.Process(). This *will*
     be investigated as cross-platform usage is desirable. 
 
-Necessary libraries:
-sys
-tqdm
-hashlib
-argparse
-time
-string
-os
-math
-itertools
-multiprocessing
-textwrap
-
 USAGE
 -------------------------------
 Install requirements:
