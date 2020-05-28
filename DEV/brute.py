@@ -1,6 +1,6 @@
 from hashlib import md5
 from sys import exit
-import argparse, time, string, itertools
+import argparse, time, string, itertools, math
 from tqdm import tqdm
 
 parser = argparse.ArgumentParser(
@@ -36,7 +36,8 @@ for i in range(len(hashlist)):
 chars = string.ascii_letters + string.digits + string.punctuation
 
 for i in range(args.MINCHARS, args.MAXCHARS+1):
-    for item in tqdm(itertools.product(chars, repeat=i)):
+    permutations = math.pow(len(chars), i)
+    for item in tqdm(itertools.product(chars, repeat=i), total=permutations):
         word = "".join(item)
         wordhash = md5(word.encode('ascii')).hexdigest()
         if wordhash in hashlist:

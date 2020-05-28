@@ -4,7 +4,7 @@ import passlib.hash
 import string
 import math
 
-#hash = '$P$BjRvZQ.VQcGZlDeiKToCQd.cPw5XCe0' # 'michael'
+#h = '$P$BjRvZQ.VQcGZlDeiKToCQd.cPw5XCe0' # 'michael'
 h = '$P$5ZDzPE45C4OTectfmy4aMzHsfrcN9a.' # 'pass'
 
 def brute(h):

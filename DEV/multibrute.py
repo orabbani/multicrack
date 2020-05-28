@@ -60,8 +60,7 @@ def brute(hash_list, min_chars, max_chars, algorithm, out_file):
     string_chars = string.ascii_letters + string.digits + string.punctuation
 
     # This is how many strings are generated before the list is passed to a new process
-    # It is currently set around the rate at which I can generate strings
-    string_list_length = 3000000 
+    string_list_length = 10000000
 
     # Takes a pregenerated list of strings, performs the given hashing algorithm, compares to
     #   the given hash file, prints found hashes and outputs to path in out_file
