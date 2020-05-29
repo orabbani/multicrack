@@ -5,7 +5,7 @@ import string
 import math
 
 #h = '$P$BjRvZQ.VQcGZlDeiKToCQd.cPw5XCe0' # 'michael'
-h = '$P$5ZDzPE45C4OTectfmy4aMzHsfrcN9a.' # 'pass'
+h = '$P$5f85L.50r/yErtFqDJx4WL9ZLQcOKw0' # 'win'
 
 def brute(h):
     string_chars = string.ascii_letters + string.digits + string.punctuation
@@ -18,8 +18,12 @@ def brute(h):
     while not cracked:
         length += 1
         permutations = math.pow(len(string_chars), length)
-        for item in tqdm(itertools.product(string_chars, repeat=length), total=int(permutations)):
+        t = tqdm(itertools.product(string_chars, repeat=length), total=permutations)
+        for item in t:
             s = ''.join(item)
+            # This shows the current string being generated at signifcant expense to speed
+            #t.set_description(s)
+            #t.refresh() 
             if passlib.hash.phpass.hash(s, salt=salt, rounds=rounds) == h:
                 cracked = s
                 break
